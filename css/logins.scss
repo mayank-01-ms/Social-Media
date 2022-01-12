@@ -138,6 +138,23 @@ $formWidth: 250px;
     }
 }
 
+.dummy_acc_credentials{
+    margin-top: 1.5rem;
+    background: #ffffff31;
+    padding: 1rem;
+    border-radius: 1rem;
+    max-width: 300px;
+
+    h4{
+        margin-bottom: 0.5rem;
+    }
+    .note_div{
+        margin-top: 0.5rem;
+        display: flex;
+        font-size: 0.85rem;
+    }
+}
+
 //Footer on login and signup page
 .ls-footer{
     position: relative;
