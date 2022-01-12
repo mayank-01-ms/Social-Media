@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/color.css">
     <link rel="stylesheet" href="css/logins.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <title>Login</title>
     <style>
@@ -93,6 +94,7 @@
                     </div>
                     <div class="inpbx">
                         <input type="password" name="" id="password" placeholder="Password">
+                        <i class="fa fa-eye" aria-hidden="true"></i>
                     </div>
                     <div class="frgtps">
                         <a href="">Forgot Password?</a> 
@@ -138,6 +140,18 @@
     </div>
 </body>
 <script>
+
+    const eyeIcon = document.querySelector('.fa');
+    eyeIcon.addEventListener('click', () => {
+        const passwordField = document.getElementById("password");
+        if(eyeIcon.classList.contains('fa-eye')){
+            passwordField.type = 'text';
+            eyeIcon.classList.replace('fa-eye', 'fa-eye-slash');
+        } else if(eyeIcon.classList.contains('fa-eye-slash')){
+            passwordField.type = 'password';
+            eyeIcon.classList.replace('fa-eye-slash', 'fa-eye');
+        }
+    });
 
     const loginForm = document.getElementById("loginForm");
     loginForm.addEventListener("submit", (e) => {
