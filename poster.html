@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Poster</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        body{
+            min-width: 100vw;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #141414;
+            color: white;
+        }
+        h3{
+            font-size: 3.5rem;
+            height: 54px;
+            text-align: center;
+            text-shadow: 0px 0px 40px #fff;
+            -webkit-box-reflect: below 0 linear-gradient(180deg,rgba(0,0,0, 0), rgba(0,0,0, 0.5));
+        }
+        .col{
+            color: #09c6f9;
+            text-shadow: 0px 0px 50px #09c6f9;
+        }
+        .btn{
+            margin-top: 80px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            background: #272727;
+            height: 40px;            
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 20px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+        }
+        .middle{
+            margin-top: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .logo-wrap,
+        .logo{
+            height: 70px;
+            width: 70px;
+            background: #fff;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3),
+                        0px 5px 10px rgba(255, 255, 255, 0.3),
+                        0px 10px 20px rgba(255, 255, 255, 0.3);
+        }
+        .logo{
+            box-shadow: none;
+            animation: animate 1.5s linear infinite;
+            background: transparent;
+        }
+        @keyframes animate {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(300deg);
+            }
+            100%{
+
+                transform: rotate(360deg);
+            }
+        }
+        .logo::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 30px;
+            width: 30px;
+            border: 6px solid #141414;
+            border-radius: 50%;
+        }
+        .logo::after{
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #141414;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top">
+            <h3>NE<span class="col">X</span>US</h3>
+        </div>
+        <div class="middle">
+            <div class="logo-wrap">
+            <div class="logo"></div>
+            </div>
+        </div>
+        <div class="bottom">
+            <div class="btn">Unleashing Soon</div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

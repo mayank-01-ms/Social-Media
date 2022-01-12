@@ -1,0 +1,130 @@
+@import "imports/common";
+
+body{    
+    background: var(--bg);
+    color: var(--txtH);
+}
+
+//Header css file
+
+@import "imports/headerarrow";
+.header{    
+    .hdrstngs{
+        width: 40px;
+        font-size: 1.6rem;
+        color: var(--txtM);
+    }
+    .pghttl{
+        margin-right: 0;
+    }
+}
+
+
+//main wrapper
+.main-content{
+    margin: 0;
+    padding: 0 10px;
+}
+//for fixing header
+.sshdr{
+    padding-top: 55px;
+
+    .nsoptsn{        
+        @include hvCenter;
+        height: 35px;
+        width: 100%;
+        font-size: 0.9rem;
+        margin-bottom: 5px;
+        border-bottom: 1px solid var(--borderBottom);
+
+        div{
+            width: 100%;
+            height: 35px;
+            @include hvCenter;
+        }
+        .active{                    
+            font-weight: 600;
+            color: var(--link);
+            border-bottom: 2px solid var(--link);
+        }
+    }
+}
+
+//Notifications area
+.ntfnarea{
+    padding: 5px;
+    padding-bottom: 45px;
+
+    //NOTIFICATIONS LIST ITEM
+    @import "imports/notifications";
+
+    .ntnfelewr{
+        padding: 10px 0 !important;
+    }
+    .ntnfnslm{
+        @include hvCenter;
+        height: 50px;
+        font-size: 2rem;
+        color: var(--txtL);
+
+        .plsicon{
+            @include hvCenter;
+            height: 30px;
+            width: 30px;
+            border: 1px solid var(--txtL);
+            border-radius: 50%;
+        }
+    }
+    .ntmnsapnd{
+        display: none;
+    }
+}
+
+.ntnwrdcrl, 
+.mnswrscrl{
+    // display: none !important;
+}
+//Empty notifications or mentions
+.mtntfnsd,
+.mtntmnsd{
+    text-align: center;
+    padding-top: 50px;
+    font-size: 0.88rem;
+    display: none;
+
+    i{            
+        padding: 0.5rem;
+        font-size: 2rem;
+        font-weight: 300;
+        border: 1px solid var(--txtH);
+        border-radius: 50%;
+    }
+    h3{
+        margin-top: 15px;
+    }
+    .mttxtnt{            
+        padding-top: 10px;
+        font-size: 0.85rem;
+        color: var(--txtM);
+    }
+}
+.mtntfnsd .mtshrpst{
+    padding: 15px 0;
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: dodgerblue;
+    text-decoration: none;
+}
+.footer .fa-heart.active{
+    color: red;
+    animation: heart 2s linear infinite;
+    text-shadow: none;
+}
+@keyframes heart{
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(0.9);
+    }
+}

@@ -1,0 +1,49 @@
+@mixin hvSpaceAround {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+@mixin hvCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin spaceBetween {
+    display: flex;
+    justify-content: space-between;
+}
+
+//Rounded element
+@mixin roundImg($dm) {
+    height: $dm;
+    width: $dm;
+    border-radius: 50%;
+}
+
+
+@mixin toggle {    
+    height: 23px;
+    width: 45px;
+    border-radius: 23px;
+    background: var(--toggleBg);
+    right: 5px;
+    position: relative;
+}
+@mixin toggleC {    
+    left: 23px;
+    border: 2px solid var(--toggleBorder);
+}
+@mixin toggleA {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid var(--toggleBorder);
+    box-sizing: border-box;
+    transition: 0.3s;
+}

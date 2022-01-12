@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Dashboard</title>
+</head>
+
+<body>
+    <main>
+        <section class="glass">
+            <div class="navigation">
+                <div class="admin_info">
+                    <img src="../../images/avtar.png" alt="">
+                    <h3>Mayank Singh</h3>
+                    <p>Owner</p>
+                </div>
+                <ul class="links">
+                    <li class="active">
+                        <a href="#">
+                            <img src="" alt="">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <img src="" alt="">
+                            Manage user
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="" alt="">
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admins.html">
+                            <img src="" alt="">
+                            Admins
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout">
+                    Logout
+                </div>
+            </div>
+            <div class="content">
+                <header>
+                    <h1>Dashboard</h1>
+                    <div class="theme_selector">
+                        <p>Theme:</p>
+                        <ul>
+                            <li>
+                                <input type="radio" name="theme" id="Peach" value="peach">
+                                <label for="Peach">Peach</label>
+                                <div class="check"><div class="inside"></div>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Green" value="green">
+                                <label for="Green">Green</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Dark" value="dark">
+                                <label for="Dark">Dark</label>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <section class="scrollable_view">
+                    <div class="users_stats">
+                        <div class="users_joined">
+                            <div class="total_users">
+                                <h4>Total users :</h4> 
+                                <p>
+                                    2k
+                                    <span class="growth_indicator up">&nbsp; ↑ 12%</span>
+                                </p>
+                            </div>
+                            <div class="month_view">
+                                <div class="month_selector">
+                                    <h4>Monthly users</h4>
+                                    <select id="">
+                                        <option value="" selected>January 2021</option>
+                                    </select>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <p>Number of new users</p>
+                                        <p class="stats_num">14</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="users_left">
+                            <div class="total_users">
+                                <h4>Accounts Deleted: </h4>
+                                <p>
+                                    0
+                                    <span class="growth_indicator down">&nbsp; ↓ 0%</span>
+                                </p>
+                            </div>
+                            <div class="others">
+                                <h4>Others</h4>
+                                <ul>
+                                    <li>
+                                        <p>Number of deactivated accounts</p>
+                                        <p class="stats_num">1</p>
+                                    </li>
+                                    <li>
+                                        <p>Number of banned accounts</p>
+                                        <p class="stats_num">0</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="second_row">
+                        <div class="stats">
+                            <div class="stats_month">
+                                <h4>Monthly Statistics</h4>
+                                <select id="">
+                                    <option value="" selected>January 2021</option>
+                                </select>
+                            </div>
+                            <ul>
+                                <li>
+                                    <p>Number Of Posts</p>
+                                    <p class="stats_num">1.1k</p>
+                                </li>
+                                <li>
+                                    <p>Number Of Statuses</p>
+                                    <p class="stats_num">209</p>
+                                </li>
+                                <li>
+                                    <p>Number Of Comments</p>
+                                    <p class="stats_num">12.4k</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="permissions">
+                            <h4>App Permissions</h4>
+                            <ul class="permission_list">
+                                <li>
+                                    <label for="disable_sigin">
+                                        Disable Sign-Up
+                                    </label>
+                                    <input type="checkbox" id="disable_sigin">
+                                    <label for="disable_sigin" class="toggle"></label>
+                                </li>
+                                <li>
+                                    <label for="disable_login">
+                                        Disable Login
+                                    </label>
+                                    <input type="checkbox" id="disable_login">
+                                    <label for="disable_login" class="toggle"></label>
+                                </li>
+                                <li>
+                                    <label for="disable_posts">
+                                        Disable Posts
+                                    </label>
+                                    <input type="checkbox" id="disable_posts">
+                                    <label for="disable_posts" class="toggle"></label>
+                                </li>
+                                <li>
+                                    <label for="disable_stories">
+                                        Disable Posting Stories
+                                    </label>
+                                    <input type="checkbox" id="disable_stories">
+                                    <label for="disable_stories" class="toggle"></label>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/main.js"></script>
+</html>

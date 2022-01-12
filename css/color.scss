@@ -1,0 +1,145 @@
+body[data-theme="light"]{
+
+    //Main theme colors
+    --bg: #fff;
+    --wbg: #f6f6f6;
+    --pbg: #fff;
+
+    //text colors
+    --txtB: #00000090;
+    --txtH: #000000e0;
+    --txtM: #333435;
+    --txtL: #000000c2;
+    --txtVl: #00000091;
+
+    //input field colors
+    --ipfldbg: #f2f2f2;
+
+    //hashtag color
+    --hash: #045de9;
+
+    //links color
+    --link: dodgerblue;
+
+    //Outline colors
+    --borderBottom: rgba(153, 153, 153, 0.2);
+    --borderTop: rgba(153, 153, 153, 0.35);
+
+    //Gradient styles: ;
+    --strGradient: linear-gradient(45deg, #09c6f9, #045de9);
+    --bgGradient: linear-gradient(45deg, #ff9482, #7d77ff);
+
+    //Story colours
+    --seenStory: rgba(153, 153, 153, 0.5);
+    --strtxtH: #ffffffe9;
+    --strtxtM: #ffffffe3;
+    --strtxtL: #ffffff7a;
+
+    //Shadows
+    //Block shadow
+    --bshadow: rgba(36, 37, 38, 0.08);
+
+    //Action colors
+    --prAction: #09c6f9;
+
+    //Options span color
+    --odbg: #999;
+    --odbga: rgba(153, 153, 153, 0.25);
+
+    //Chat popup
+    --dline: rgba(36, 37, 38, 1);
+    --psbtn: dodgerblue;
+
+    //sent button colors
+    --sntbtnbdr: #000000a6;
+    --sntbtntxt: #000000d3;
+
+    //header 
+    --hbg: #fff;
+    //footer colors
+    --fbg: #fff;
+
+    //Toggle button 
+    --tgl: #d9d9d9;
+
+    //Pc
+    //hovering menu
+    --prHover: #eeeeee;
+
+    //Search page colors
+    --hashBorder: rgba(0, 0, 0, 0.1);
+}
+
+body[data-theme="dark"]{
+    
+    //Main theme colors
+    --bg: #121212;
+    --wbg: #121212;
+    --pbg: #272727;
+    
+    //text colors
+    --txtB: #ffffff90;
+    --txtH: #ffffffe0;
+    --txtM: #ffffffc9;
+    --txtL: #ffffffc2;
+    --txtVl: #ffffff91;
+
+    //input field colors
+    --ipfldbg: #2f2f2f;
+
+    //hashtag color
+    --hash: #09c6f9;
+
+    //links color
+    --link: dodgerblue;
+
+    //Outline colors
+    --borderBottom: rgba(153, 153, 153, 0.2);
+    --borderTop: rgba(153, 153, 153, 0.35);
+    
+    
+    //Gradient styles: ;
+    --strGradient: linear-gradient(45deg, #09c6f9, #045de9);
+    --bgGradient: linear-gradient(45deg, #ff9482, #7d77ff);
+    
+    //Story colours
+    --seenStory: rgba(153, 153, 153, 0.5);
+    --strtxtH: #ffffffe9;
+    --strtxtM: #ffffffe3;
+    --strtxtL: #ffffff7a;
+
+    //Shadows
+    //Block shadow
+    --bshadow: rgba(0, 0, 0, 0);
+    
+    //Action colors
+    --prAction: #09c6f9;
+    
+    //Options span color
+    --odbg: #ddd;
+    --odbga: rgba(153, 153, 153, 0.6);
+    
+    //Chat popup
+    --dline: rgba(219, 218, 217, 1);
+    --psbtn: dodgerblue;
+    
+    //sent button colors
+    --sntbtnbdr: #ffffffa6;
+    --sntbtntxt: #ffffffd3;
+    
+    //Header colors
+    --hbg: #1a1a1a;
+    //footer colors
+    --fbg: #191919;
+
+    //Toggle button 
+    --tgl: #332;
+
+    //hovering menu
+    --prHover: #333;
+
+    //Search page color
+    --hashBorder: rgba(255, 255, 255, 0.1);
+
+}
+

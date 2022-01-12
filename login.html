@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#eb6b9d">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/logins.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Login</title>
+    <style>
+        footer{
+            background: transparent;
+        }
+        .loading{
+            display: none;
+            width: 100vw;
+            height: 100vh;
+            background: #f6f6f6;
+        }
+        .loading .middle{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+        }
+        .loading .logo-wrap,
+        .loading .logo{
+            height: 70px;
+            width: 70px;
+            background: #fff;
+            border-radius: 15px;
+            position: relative;
+            box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3),
+                        0px 5px 10px rgba(255, 255, 255, 0.3),
+                        0px 10px 20px rgba(255, 255, 255, 0.3);
+        }
+        .loading .logo{
+            box-shadow: none;
+            animation: animate 1.5s linear infinite;
+            background: transparent;
+        }
+        @keyframes animate {
+            0%{
+                transform: rotate(0deg);
+            }
+            50%{
+                transform: rotate(300deg);
+            }
+            100%{
+
+                transform: rotate(360deg);
+            }
+        }
+        .loading .logo::before{
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            height: 30px;
+            width: 30px;
+            border: 6px solid #141414;
+            border-radius: 50%;
+        }
+        .loading .logo::after{
+            content: '';
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #141414;
+            height: 6px;
+            width: 6px;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body data-theme="light">
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="logo">                
+            </div>
+            <div class="logo-text">
+                NEXUS
+            </div>
+            <div class="form-container">
+                <form action="" method="post" id="loginForm">
+                    <div class="inpbx">
+                        <input type="text" name="username" id="username" placeholder="Username or email">
+                    </div>
+                    <div class="inpbx">
+                        <input type="password" name="" id="password" placeholder="Password">
+                    </div>
+                    <div class="frgtps">
+                        <a href="">Forgot Password?</a> 
+                    </div>
+                    <div id="e-msg">
+                    </div>
+                    <button type="submit">Login</button>
+                </form>
+            </div>
+            <div class="nsacgp">
+                Don't have an account? <a href="signup.html">Signup</a>
+            </div>
+        </div>
+        <footer class="ls-footer">
+            &copy; 2020 - Mayank Singh
+            <ul class="links">
+                <li>
+                    <a href="">Privacy</a> 
+                </li>
+                <li>
+                    <a href="">APIs</a>
+                </li>
+                <li>
+                    <a href="">Faqs</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script>
+
+    const loginForm = document.getElementById("loginForm");
+    loginForm.addEventListener("submit", (e) => {
+
+        e.preventDefault();        
+
+        const username = document.getElementById("username");
+        const password = document.getElementById("password");
+        const messageField = document.getElementById("e-msg");
+
+        let usernameValue = username.value.trim();
+        let passwordValue = password.value.trim();
+        let message = "";
+        
+        if(usernameValue.length < 4){
+            message = "* Username must contain at least 4 charachters";
+            username.focus();
+        } else
+        if (usernameValue.length > 45){
+            message = "* Username must not exceed 45 charachters";
+            username.focus();
+        } else
+        if(passwordValue.length < 6){
+            message = "* Password must contain at least 6 charachters";
+            password.focus();
+        } else
+        if (passwordValue.length > 30){
+            message = "* Too long Password";
+            password.focus();
+        }
+
+        messageField.innerHTML = message;
+        // const loading = document.querySelector(".loading");
+        // const container = document.querySelector(".container");
+        // container.style.display = "none";
+        // loading.style.display = "flex";
+        // setTimeout(() => {
+        // window.location.assign("index.html");
+            
+        // }, 1500);
+
+        if (message == ""){
+            console.log("proceeding");
+            let action = "login";
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', '/login.php', true);
+
+            xhr.onprogress = () => {
+
+            }
+
+            xhr.onload = () => {
+                if (this.status === 200){
+                    console.log(this.Response);
+                }
+            }
+
+            let params = `{
+                username: ${username},
+                password: ${password},
+                action: ${action}
+            }`;
+
+            xhr.send(params);
+        }
+
+    });
+    
+
+
+</script>
+</html>

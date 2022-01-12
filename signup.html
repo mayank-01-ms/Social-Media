@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#eb6b9d">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/logins.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Login</title>
+</head>
+<body data-theme="light">
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="logo">                
+            </div>
+            <div class="logo-text">
+                NEXUS
+            </div>
+            <div class="form-container">
+                <form action="" method="post" id="signupForm">
+                    <div class="inpbx">
+                        <input type="text" name="fullname" id="fullname" placeholder="Full Name" maxlength="30">
+                    </div>
+                    <div class="inpbx">
+                        <input type="email" name="email" id="email" placeholder="Email address" maxlength="50">
+                    </div>
+                    <div class="inpbx">
+                        <input type="text" name="username" id="username" placeholder="Username" maxlength="15">
+                    </div>
+                    <div class="inpbx">
+                        <input type="password" name="" id="password" placeholder="Password" maxlength="30">
+                    </div>
+                    <div class="inpbx">
+                        <input type="password" name="" id="cpassword" placeholder="Confirm Password" maxlength="30">
+                    </div>
+                    <div id="e-msg"></div>
+                    <button type="submit" id="submit">Sign up</button>
+                </form>
+            </div>
+            <div class="nsacgp">
+                Already have an account? <a href="login.html">Login</a>
+            </div>
+        </div>
+        <footer class="ls-footer">
+            &copy; 2020 - Mayank Singh
+            <ul class="links">
+                <li>
+                    <a href="">Privacy</a> 
+                </li>
+                <li>
+                    <a href="">APIs</a>
+                </li>
+                <li>
+                    <a href="">Faqs</a>
+                </li>
+            </ul>
+        </footer>
+    </div>
+</body>
+<script src="js/main.js"></script>
+<script>
+    const signupForm = document.getElementById("signup-form");
+    signupForm.addEventListener("submit", (e) => {
+
+        e.preventDefault();
+
+        const fullName = document.getElementById("fullname").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const userName = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value;
+        const cpassword = document.getElementById("cpassword").value;
+
+        const btn = document.getElementById("submit");
+
+        const messageDiv = document.getElementById("e-msg");
+        messageDiv.innerHTML = '';
+
+        const userNameRegex = '/^[a-zA-Z0-9_]*$/';
+        const nameRegex = '/^[a-zA-Z]*$/';
+
+        let msg = "";
+
+        // if (fullName.length < 4){
+        //     msg = 'Name must have at least 4 charachters';
+        // } else 
+        // if (userName.length < 5){
+        //     msg = "Username must contain at least 5 charachters";
+        // } else
+        // if (password.length < 6){
+        //     msg = "*Password must contain at least 6 charachters";
+        // } else
+        // if (password.length > 30){
+        //     msg = "Password must not exceed 30 charachters";
+        // }
+        // if (password != cpassword){
+        //     msg = "*Passwords do not match!!"
+        // }
+        messageDiv.innerHTML = msg;
+
+        if (msg === ""){
+            console.log("can proceed");
+
+            let xhr = new XMLHttpRequest();
+            xhr.open('POST', 'http://localhost/registeration.php', true);
+
+            xhr.onprogress = () => {
+                btn.style.opacity = 0.7;
+            }
+
+            xhr.onload = () => {
+                if (this.status === 200){
+                    console.log(this.responseText);
+                }
+            }
+
+            let params = `{
+                username: ${userName},
+                realname: $${fullName},
+                mail: ${email},
+                password: ${password}
+            }`;
+            xhr.send(params);
+        }
+    });
+</script>
+</html>

@@ -1,0 +1,134 @@
+@mixin hvCenter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin ihvCenter {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+@mixin hvSpaceAround {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+@mixin aligncenter {
+    display: flex;
+    align-items: center;
+}
+@mixin justifycenter {
+    display: flex;
+    justify-content: center;
+}
+@mixin justifyacfs {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+@mixin fSpaceBetween {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+//Rounded element
+@mixin roundImg($dm) {
+    height: $dm;
+    width: $dm;
+    border-radius: 50%;
+}
+
+//Button mixin
+@mixin btn {
+    outline: none;
+    border: none;
+    background: var(--link);
+    color: #fff;
+}
+
+//Input and textarea
+@mixin inpt {
+    outline: none;
+    border: none;
+    background: var(--bg);
+    color: var(--txtM);
+}
+
+//toggle mixin
+@mixin toggle {    
+    height: 23px;
+    width: 45px;
+    border-radius: 23px;
+    background: var(--tgl);
+    position: absolute;
+    right: 5px;
+}
+@mixin toggleC {    
+    left: 23px;
+    border: 2px solid dodgerblue;
+}
+@mixin toggleA {
+    content: '';
+    position: absolute;
+    left: 0;
+    height: 23px;
+    width: 23px;
+    border-radius: 50%;
+    background: #fff;
+    border: 2px solid #d9d9d9;
+    box-sizing: border-box;
+    transition: 0.3s;
+}
+
+$hrtActv: #f00;
+
+$strGradientFirst: #09c6f9;
+
+$heartActive: linear-gradient(to bottom, #ff9397, #f650ad);
+$home: linear-gradient(to right, #6ee2f5, #6454f0);
+$cog: linear-gradient(to right, #d0ffed, #0088ba);
+$cog: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+$cog: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+$random: linear-gradient(to right, #ff6cab, #7366ff);
+$messages: linear-gradient(to right, #ff9482, #ee4d5f);
+$messages: linear-gradient(to right, #fdc830, #f37335);
+$messages2: linear-gradient(to right, #ff416c, #ff4b2b);
+$bookmarks: linear-gradient(to right, #a8ff78, #78ffd6);
+
+$hoverModal: #2f2f2f;
+
+@mixin hoverTitle {    
+    display: none;
+    background: $hoverModal;
+    color: #fff;
+    padding: 12px 25px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    letter-spacing: 0.06rem;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
+                0px 0px 20px rgba(0, 0, 0, 0.5);
+}
+
+
+@mixin heartActive {
+    background: $heartActive;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+@mixin gradientIcon($backgroundGradient) {
+    background: $backgroundGradient;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+// h3{
+//     background-color: #045de9;
+//     background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+// }
+// h3{
+//     background-color: #63a4ff;
+//     background-image: linear-gradient(315deg, #63a4ff 0%, #83eaf1 74%);
+// }

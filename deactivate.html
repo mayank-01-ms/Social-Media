@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Deactivate Account</title>
+</head>
+<body data-theme="light">
+    <div class="container">
+        <main class="main-content">
+            <div class="dac-wrapper">
+                <h1>Temporarily disable your account</h1>
+                <p>Hi <span class="username">USerName</span>,</p>
+                <p>
+                    You can disable your account temporarily instead of deleting it.
+                    Your account and all data will be hidden. You can reactivate your 
+                    account by logging back in. 
+                </p>
+
+                <h5>Why you are deactivating your account ?</h5>
+                <form action="" method="POST">
+                    <select name="" id="select-reason">
+                        <option value="0">Select a reason</option>
+                        <option value="1">I want to take a break</option>
+                        <option value="5">Other</option>
+                    </select>
+                    <textarea name="" id="reason" placeholder="Please specify the reason" maxlength="250"></textarea>
+                    <p class="pwd-label">
+                        Please enter your password
+                    </p>
+                    <input type="password" name="" id="" placeholder="Enter your password">
+                    <div id="message"></div>
+                    <p class="fp">
+                        <a href="forgotpassord.html">Forgot Password?</a>
+                    </p>
+                    <div id="message"></div>
+                    <p class="pr-msg">Are you sure you want to continue ?</p>
+                    <button type="submit">Disable account</button>
+                </form>
+            </div>
+        </main>
+        <footer>
+            <div class="footer">
+                <div class="home-btn f-icsize">
+                    <a href="index.html">
+                        <img src="images/home.svg" class="ftr-icon">
+                    </a>
+                </div>
+                <div class="search-btn f-icsize">
+                    <a href="search.html">
+                        <img src="images/loupe.svg" class="ftr-icon">
+                    </a>
+                </div>
+                <div class="add-btn f-icsize" id="add-btn">
+                    <img src="images/add.png" class="ftr-icon">
+                </div>
+                <div class="notification-btn f-icsize">
+                    <a href="notifications.html">
+                        <img src="images/heart.svg" class="ftr-icon">
+                    </a>
+                </div>
+                <div class="user-info f-icsize">
+                    <a href="ownpr.html">
+                        <img src="images/img4.jpg">
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+</body>
+<script src="js/main.js"></script>
+<script>
+    const reasonArea = document.getElementById("reason");
+    const selectOption = document.getElementById("select-reason");
+    const messageBox = document.getElementById("message");
+
+    selectOption.addEventListener("change", () => {
+        if (selectOption.value == 5){
+            reasonArea.style.display = "block";
+        }
+        else{
+            reasonArea.style.display = "none";
+        }
+    });
+
+</script>
+</html>

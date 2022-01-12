@@ -1,0 +1,123 @@
+.ntnfelewr{            
+    display: flex;
+    color: var(--txtM);
+    font-size: 0.83rem;
+    width: 100%;
+    padding: 5px 0; //imp
+    border-bottom: 1px solid var(--borderBottom);
+
+    a{            
+        color: var(--txtH);
+    }
+    // For unread notifications
+    // &.unread{
+    //     // opacity: 0.9;
+    // }
+    .ntnfst{                    
+        font-size: 1.2rem;
+        color: dodgerblue;
+        width: 40px;
+
+        .fa-heart{
+            @include heartActive;
+        }
+        .fa-comment{
+            @include gradientIcon($messages)
+        }
+        .fa-user{
+            @include gradientIcon($bookmarks)
+        }
+        .fa-bolt,
+        .fa-at{
+            @include gradientIcon($cog);
+        }
+    }
+    .ntnscnd{                    
+        width: calc(100% - 95px);
+
+        //ACtion btns
+        .actns{
+            cursor: pointer;
+            display: inline-block;
+            border: 1px solid var(--borderTop);
+            border-radius: 4px;
+            margin-top: 5px;
+            margin-left: 5px;
+            padding: 2px 10px;
+
+            &.cnf{
+                background: var(--link);
+                color: #fff;
+            }
+        }
+        .boldnft{                    
+        font-weight: 600;
+        color: var(--txtH);
+        }
+        .ntnts{                            
+            color: var(--txtL);
+            font-size: 0.7rem;
+            padding-left: 0.4rem;
+            @include ihvCenter;
+
+            span{
+                display: inline-block;
+                height: 0.3rem;
+                width: 0.3rem;
+                margin-right: 5px;
+                border-radius: 50%;
+                background: var(--bgGradient);
+            }
+        }
+        .ntnpsopt{
+            span{   
+                cursor: pointer;                                 
+                display: inline-block;
+                padding: 10px 10px 0 0;
+                font-size: 0.7rem;
+            }
+            .n-lk-hrt{
+                &.active{
+                    @include heartActive;
+                }
+            }
+            @import "../animations/flyingHeartAnimation";
+        }
+    }
+    .ntnthrd{
+        @include hvCenter;                    
+        height: 45px;
+        width: 45px;
+        margin-left: 10px;
+
+        img{                            
+            height: 45px;
+            width: 45px;
+            border-radius: 5px;
+        }
+        .accpt{
+            img{                                    
+                @include roundImg(40px);
+            }
+        }
+    }
+
+    &:first-child{
+        padding-top: 0px;
+    }
+
+    //Follow requests
+    &.flreq{
+        max-height: 50px;
+
+        //Count of requests
+        .rqcnt{
+            display: inline-block;
+            padding: 2px 4px;
+            border-radius: 50%;
+            margin-left: 5px;
+            background: #f00;
+            color: #fff;
+        }
+    }
+}

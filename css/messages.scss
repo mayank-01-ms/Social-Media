@@ -1,0 +1,149 @@
+@import "imports/common"; 
+
+.container{
+    main{
+        padding-top: 60px;
+        .chats-list{
+            font-size: 0.9rem;
+            padding: 1rem;
+
+            .chat-user{
+                list-style: none;
+                display: flex;
+                align-items: center;
+                margin: 0.5rem 0;
+
+                .pr-img{
+                    width: 3rem;
+                    
+                    img{
+                        @include roundImg(3rem);
+                    }
+                }
+                .user-details{
+                    margin-left: 1rem;
+                    color: var(--txtM);
+
+                    .toast-msg{
+                        font-size: 0.85rem;
+                        color: var(--txtL);
+                    }
+                }
+            }
+        }
+
+        .chats-list{
+            display: none;
+        }
+        .chat-page{
+            header{
+                @include aligncenter;
+                padding: 0 1rem;
+                margin-top: -1rem;
+
+                .back-btn{
+                    i{
+                        font-size: 1.25rem;
+                    }
+                }
+                .user-info{
+                    width: 100%;
+                    text-align: center;
+                }
+            }
+
+            .messages{
+                padding-top: 50px;
+                font-size: 0.9rem;
+                background: var(--bg);
+                min-height: 80vh;
+                overflow-y: scroll;
+
+                ul{
+                    padding: 0 0.5rem;
+                    .message{
+                        list-style: none;
+                        padding: 0.5rem;
+                        margin: 0.25rem 0;
+                        max-width: 70vw;
+                        border: 1px solid var(--borderTop);
+                        
+                        p.timestamp{
+                            font-size: 0.75rem;
+                            margin-top: 0.5rem;
+                            margin-left: 1rem;
+                            color: var(--txtL);
+                            float: right;
+                        }
+                    }
+                    .left{
+                        border-radius: 0 1rem 1rem 1rem;
+                        float: left;
+                        clear: both;
+                    }
+                    .right{
+                        border-radius: 1rem 1rem 0 1rem;
+                        float: right;
+                        clear: both;
+                    }
+
+                    .post{
+                        border-radius: 1rem;
+                        border: none;
+                        background: var(--pbg);
+
+                        .post-header{
+                            .post-user-profile{
+                                display: flex;
+                                align-items: center;
+
+                                img{
+                                    @include roundImg(2rem);
+                                }
+                                p{
+                                    font-weight: 600;
+                                    margin-left: 0.5rem;
+                                }
+                            }
+                            .post-preview{
+                                width: 100%;
+                                margin: 0.5rem -0.5rem;
+                                img{
+                                    width: calc(100% + 1rem);
+                                }
+                            }
+                            .post-caption{
+                                span{
+                                    font-weight: 600;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            footer{
+                height: auto;
+                border-radius: 0;
+                padding: 0.5rem;
+
+                .message-input{
+                    display: flex;
+                    form{
+                        width: 100%;
+
+                        input{
+                            width: 100%;
+                            padding: 0.75rem;
+                            outline: none;
+                            border: 1px solid var(--borderTop);
+                            border-radius: 50px;
+                            background: var(--ipfldbg);
+                            color: var(--txtH);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

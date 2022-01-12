@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Admins</title>
+</head>
+
+<body data-theme="green">
+    <main>
+        <section class="glass">
+            <div class="navigation">
+                <div class="admin_info">
+                    <img src="images/avtar.png" alt="">
+                    <h3>Mayank Singh</h3>
+                    <p>Owner</p>
+                </div>
+                <ul class="links">
+                    <li>
+                        <a href="index.html">
+                            <img src="" alt="">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="user.html">
+                            <img src="" alt="">
+                            Manage user
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="">
+                            <img src="" alt="">
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admins.html">
+                            <img src="" alt="">
+                            Admins
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout">
+                    Logout
+                </div>
+            </div>
+            <div class="content">
+                <header>
+                    <h1>Reports</h1>
+                    <div class="theme_selector">
+                        <p>Theme:</p>
+                        <ul>
+                            <li>
+                                <input type="radio" name="theme" id="Peach" value="peach">
+                                <label for="Peach">Peach</label>
+                                <div class="check"><div class="inside"></div>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Green" value="green">
+                                <label for="Green">Green</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Dark" value="dark">
+                                <label for="Dark">Dark</label>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <section class="scrollable_view reports">
+                    <ul class="reports_list">
+                        <h4>Reports List</h4>
+                        <li>
+                            <p>
+                                <a href="">post</a> by <a href="">User</a>
+                            </p>
+                            <p class="view_report_details">View Details</p>
+                            <p>Unsolved</p>
+                        </li>
+                    </ul>
+                    <div class="manage_report">
+                        <p>Select a report to view details</p>
+                        Feature under development
+                        <div class="post_preview">
+                            <img src="images/118248169_301410627950201_2503420261358040932_n.jpg" alt="preview">
+                        </div>
+                        <div class="post_caption">
+                            <strong>Caption</strong> Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam harum ipsa non? Corporis officiis, iure hic natus doloribus placeat nobis veniam nemo tempora aperiam doloremque maiores dolores, cumque ab nulla.
+                        </div>
+                        <ul class="post_details">
+                            <li>
+                                <p>Posted by</p>
+                                <p>
+                                    <a href="#">Username</a>
+                                </p>
+                            </li>
+                            <li>
+                                <p>Likes Count</p>
+                                <p>456</p>
+                            </li>
+                            <li>
+                                <p>Comments Count</p>
+                                <p>23</p>
+                            </li>
+                            <li>
+                                <p>Posted On</p>
+                                <p>7 Dec 2020, 11:01:12</p>
+                            </li>
+                            <li>
+                                <p>Comments</p>
+                                <p>Enabled</p>
+                            </li>
+                        </ul>
+                        <div class="post_actions">
+                            <button>Resolve after deleting</button>
+                            <button>Resolve without deleting</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/main.js"></script>
+
+</html>

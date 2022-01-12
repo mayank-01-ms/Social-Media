@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Add Admins</title>
+</head>
+
+<body data-theme="green">
+    <main>
+        <section class="glass">
+            <div class="navigation">
+                <div class="admin_info">
+                    <img src="../../images/avtar.png" alt="">
+                    <h3>Mayank Singh</h3>
+                    <p>Owner</p>
+                </div>
+                <ul class="links">
+                    <li>
+                        <a href="index.html">
+                            <img src="" alt="">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="" alt="">
+                            Manage user
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <img src="" alt="">
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admins.html">
+                            <img src="" alt="">
+                            Admins
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout">
+                    Logout
+                </div>
+            </div>
+            <div class="content">
+                <header>
+                    <h1>Manage User</h1>
+                    <div class="theme_selector">
+                        <p>Theme:</p>
+                        <ul>
+                            <li>
+                                <input type="radio" name="theme" id="Peach" value="peach">
+                                <label for="Peach">Peach</label>
+                                <div class="check"><div class="inside"></div>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Green" value="green">
+                                <label for="Green">Green</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Dark" value="dark">
+                                <label for="Dark">Dark</label>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <section class="scrollable_view add_admin_form">
+                    <form action="">
+                        <h4>Enter Admin Details</h4>
+                        <div class="input_group">
+                            <label for="username">Username</label>
+                            <input type="text" id="username">
+                        </div>
+                        <div class="input_group">
+                            <label for="full_name">Full name</label>
+                            <input type="text" id="full_name">
+                        </div>
+                        <div class="input_group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="input_group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="input_group">
+                            <label for="cpassword">Confirm Password</label>
+                            <input type="password" id="cpassword">
+                        </div>
+                        <div id="msg"></div>
+                        <button type="submit">Add</button>
+                    </form>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/main.js"></script>
+
+</html>

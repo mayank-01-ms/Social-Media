@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Add Admins</title>
+</head>
+
+<body data-theme="green">
+    <main>
+        <section class="glass">
+            <div class="navigation">
+                <div class="admin_info">
+                    <img src="images/avtar.png">
+                    <h3>Mayank Singh</h3>
+                    <p>Owner</p>
+                </div>
+                <ul class="links">
+                    <li>
+                        <a href="index.html">
+                            <img src="" alt="">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="" alt="">
+                            Manage user
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <img src="" alt="">
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admins.html">
+                            <img src="" alt="">
+                            Admins
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="" alt="">
+                            Add Admins
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout">
+                    Logout
+                </div>
+            </div>
+            <div class="content">
+                <header>
+                    <h1>Edit Profile</h1>
+                    <div class="theme_selector">
+                        <p>Theme:</p>
+                        <ul>
+                            <li>
+                                <input type="radio" name="theme" id="Peach" value="peach">
+                                <label for="Peach">Peach</label>
+                                <div class="check"><div class="inside"></div>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Green" value="green">
+                                <label for="Green">Green</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Dark" value="dark">
+                                <label for="Dark">Dark</label>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <section class="scrollable_view login_form">
+                    <form action="">
+                        <h4>Enter new details</h4>
+                        <div class="input_group">
+                            <label for="password">Password</label>
+                            <input type="password" id="password">
+                        </div>
+                        <div class="input_group">
+                            <label for="cpassword">Confirm Password</label>
+                            <input type="password" id="cpassword">
+                        </div>
+                        <div id="msg"></div>
+                        <button type="submit">Change Password</button>
+                    </form>
+                    <div class="change_profilePic">
+                        <img src="images/avtar.png">
+                        <p>Current Profile Picture</p>
+                        <input type="file" id="profilePic">
+                        <div id="msg"></div>
+                        <label for="profilePic">Select New Profile Picture</label>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/main.js"></script>
+
+</html>

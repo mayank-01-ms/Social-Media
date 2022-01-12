@@ -1,0 +1,472 @@
+@import "imports/common";
+
+//Header css file
+
+@import "imports/headerarrow";
+.header{   
+    .pghttl{
+        margin: 0;
+        margin-right: 2.6rem;
+    }
+}
+
+main{
+    background: var(--bg);
+    margin: 0 !important;
+}
+
+//Wrapper section
+.cntnrwrp{
+    color: var(--txtH);
+    font-size: 0.9rem;
+
+    //********SETTINGS PAGE***********
+    .accstg,
+    .genstg{
+        padding-top: 60px;
+        h4{
+            text-transform: uppercase;
+            color: var(--txtL);
+            font-weight: 500;
+            border-bottom: 1px solid var(--borderBottom);
+            margin: 5px 0;
+            padding-left: 15px;
+            padding-bottom: 10px;
+        }
+        ul{
+            li{
+                list-style: none;
+                height: 35px;
+                padding-left: 15px;
+                padding-bottom: 1.5%;
+                margin: 5px;
+                border-bottom: 1px solid var(--borderBottom);
+                @include aligncenter;
+
+                a{
+                    text-decoration: none;
+                    color: var(--txtM);
+                    display: inline-block;
+                    position: relative;
+                    width: 100%;
+
+                    i{
+                        position: absolute;
+                        top: -2px;
+                        right: 5px;
+                        font-size: 1.2rem;
+                        color: var(--txtL);
+                    }
+                }
+            }
+        }
+    }
+    .genstg{
+        padding-top: 15px;
+
+        .dtmcb{
+            position: relative;
+
+            input{
+                display: none;
+            }
+            label{
+                @include aligncenter;
+            }
+            .stltoggle{
+                @include toggle;
+
+                &::after{
+                    @include toggleA;
+                }                
+            }
+            input:checked + .stltoggle{
+                background: dodgerblue;
+            }
+            input:checked + .stltoggle::after{
+                @include toggleC;
+            }
+        }
+        .lostng{
+            a{
+                color: var(--prAction);
+                font-weight: 500;
+            }
+        }
+    }
+
+    //*****SETTINGS PAGE OVER************
+
+    //*****PRIVACY AND SECURITY PAGE************
+    .prvcsc{
+        padding: 0 15px;
+        padding-top: 60px;
+        .stopblk{
+            padding: 20px 0;
+            font-size: 0.85rem;
+            position: relative;
+            border-bottom: 1px solid var(--borderBottom);
+            
+            .ipcbts{
+                height: 30px;
+                
+                input{
+                    display: none;
+                }
+                label{
+                    font-weight: 500;
+                    color: var(--txtM);
+                    cursor: pointer;
+                }
+                .cbtgl{
+                    @include toggle;
+
+                    &::after{
+                        @include toggleA;
+                    }
+                }            
+                input:checked + .cbtgl{
+                    background: dodgerblue;
+                }
+                input:checked + .cbtgl::after{
+                    @include toggleC;
+                }
+            }
+            .stinfo{
+                color: var(--txtL);
+                padding: 5px 10px;
+                border: 1px solid var(--borderBottom);
+                border-radius: 5px;
+            }
+        }
+        .otropns{
+            margin-top: 15px;
+            font-size: 0.9rem;
+
+            a{
+                color: var(--link);
+                text-decoration: none;
+                font-weight: 500;
+            }
+        }
+    }
+    //*****PRIVACY AND SECURITY PAGE OVER************
+    //*****ACTIVE SESSIONS PAGE************
+    .ssns{
+        padding: 0 15px;
+        padding-top: 60px;
+        color: var(--txtH);
+
+        .map-img{
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 15px;
+
+            img{
+                width: 100%;
+            }
+        }
+
+        //Each list
+        .lnwr{
+            @include aligncenter;
+            margin: 15px 0;
+
+            //iconbox left and right
+            .icbx,
+            .trmnt{
+                width: 40px;
+                @include hvCenter;
+            }
+            .icbx{
+                i{
+                    color: var(--link);
+                }
+                .fa-mobile{                    
+                    font-size: 2rem;
+                }
+            }
+            .dtls{
+                @include justifycenter;
+                flex-direction: column;
+                width: calc(100% - 80px);
+
+                .frw,
+                .srw{
+                    @include fSpaceBetween;
+                    width: 100%;
+                }
+                .frw{
+                    color: var(--txtM);
+                    font-size: 0.88rem;
+                    padding-bottom: 2px;
+
+                    .sts{                        
+                        font-size: 0.75rem;
+                        font-weight: 300;
+                        color: var(--txtL);
+                    }
+                    [data-session="current"]{
+                        color: #0f0;
+                        font-weight: 600;
+                    }
+                }
+                .srw{
+                    color: var(--txtL);
+                    font-weight: 300;
+                    font-size: 0.84rem;
+                }
+            }
+            .trmnt{
+                cursor: pointer;
+                i{                    
+                    color: #f00;
+                }
+            }
+        }
+    }
+    //*****ACTIVE SESSIONS PAGE OVER************
+
+    //*****CHANGE PASSWORD PAGE************
+    //profile image div
+    .prpicwr{
+        .imgprvw{
+            height: 12vw;
+            width: 12vw;
+            margin-right: 5px;
+
+            img{
+                height: 12vw;
+                width: 12vw;
+            }
+        }
+    }
+
+    //Input fiedls div
+    .edtflds{
+
+        //error message div
+        #errmsg{
+            font-size: 0.8rem;
+            margin: 10px 0;
+        }
+        .ipfld{
+            //Submit button
+            #sbtbtn{
+                cursor: pointer;
+                outline: none;
+                border: none;
+                border-radius: 5px;
+                padding: 8px 15px;
+                background: var(--link);
+                color: #fff;
+                font-size: 0.9rem;
+            }
+        }
+
+        //Forgot password link
+        .fpwdv{
+            a{
+                color: var(--link);
+                text-decoration: none;
+                font-weight: 500;
+                font-size: 0.85rem;
+                display: inline-block;
+                margin-top: 15px;
+            }
+        }
+    }
+}
+
+/***********STYLING MODALS***************/
+.modal{
+    .modals{
+        .modal-opt{
+            .mdhidn{
+                padding: 25px 20px;
+                color: var(--txtM);
+                border-radius: 10px;
+                display: none;
+
+                #msgqs{
+                    padding-bottom: 10px;
+                }
+
+                .opyn{
+                    @include hvSpaceAround;
+                    font-size: 0.85rem;
+                    margin-top: 10px;
+
+                    #yes,
+                    #no{
+                        width: 100%;
+                        @include hvCenter;
+                    }
+                    #yes{
+                        color: var(--link);
+                        font-weight: 500;
+                        border-right: 1px solid var(--borderTop);
+                    }
+                }
+            }
+        }
+    }
+}
+/*********STYLING MODALS OVER************/
+
+//Deactivate and delete account page
+.dac-wrapper{
+    background: var(--bg);
+    color: var(--txtH);
+    font-size: 0.85rem;
+    padding: 1rem;
+
+    h1{
+        font-weight: 400;
+        margin-bottom: 1rem;
+    }
+    h5{
+        font-weight: 400;
+        font-size: 1rem;
+        margin-top: 25px;
+    }
+    .username{
+        font-weight: 600;
+    }
+    p{
+        margin: 0.8rem 0;
+        line-height: 1.2rem;
+    }
+    .pwd-label{
+        margin-bottom: 0px;
+        margin-top: 25px;
+    }
+    .pr-msg{
+        margin-top: 25px;
+        font-weight: 600;
+    }
+    #message{
+        color: #f00;
+    }
+
+    form{
+        input{            
+            height: 2rem;
+            padding: 15px;
+            margin: 5px 0;
+            border: none;
+            outline: none;
+            border-radius: 2px;
+            color: var(--txtM);
+            border: 1px solid var(--borderBottom);
+            border-radius: 5px;
+            
+            &:focus{
+                box-shadow: 0px 0px 5px dodgerblue;
+            }
+        }
+        textarea{
+            min-height: 80px;
+            width: 100%;
+            resize: none;
+            padding: 15px;
+            outline: none;
+            color: var(--txtM);
+            border: 1px solid var(--borderBottom);
+            border-radius: 5px;
+            margin-top: 5px;
+            display: none;
+            
+            &:focus{
+                box-shadow: 0px 0px 5px dodgerblue;
+            }
+        }
+        select{
+            outline: none;
+            background: transparent;
+            height: 30px;
+            margin-top: 5px;
+            border: 1px solid var(--borderBottom);
+            color: var(--txtM);
+        }
+        .fp{
+            a{
+                font-weight: 500;
+                color: var(--link);
+            }
+        }
+        button{
+            @include btn;
+            cursor: pointer;
+            padding: 8px 15px;
+            border-radius: 5px;
+        }
+        #message{
+            color: #f00;
+        }
+    }
+
+}
+
+body[data-theme="dark"]{
+    .dac-wrapper{
+        form{
+            input,
+            textarea{
+                background: var(--bg);
+            }
+        }
+    }
+}
+
+@media only screen and (min-width: 900px){
+    main{
+        margin: 0 1vw !important;
+        margin-left: 26vw !important;
+    }
+    .container{
+        .cntnrwrp{
+            .genstg{
+                .dtmcb{
+                    label{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+
+        //ACtive login page
+        .ssns{
+            .lnwr{
+                .trmnt{
+                    i{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    
+    .stopblk{
+        label{
+            cursor: pointer;
+        }
+    }
+    .modal{
+        .modals{
+            .modal-opt{
+                
+                .mdhidn{
+                    .opyn{
+                        div{
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+

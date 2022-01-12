@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#fff">
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/profile.css">
+    <link rel="stylesheet" href="css/color.css">
+    <link rel="stylesheet" href="css/flickity.css" media="screen">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>User - Profile</title>
+</head>
+
+<body>
+
+    <body data-theme="light">
+        <div class="container">
+            <header>
+                <div class="header">
+                    <div class="logo">
+                        <img src="images/logoN.png" alt="logo">
+                    </div>
+                    <div class="head-lt">
+                        Nexus
+                    </div>
+                    <div class="rt-header">
+                        <div class="srhwrp">
+                            <form action="" method="get">
+                                <input type="text" name="query" id="u-srwadb" placeholder="Search...">
+                                <label for="u-srwadb">
+                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                </label>
+                            </form>
+                        </div>
+                        <div class="noti-bell">
+                            <i class="fa fa-bell" aria-hidden="true"></i>
+                            <span class="noti-no">15</span>
+                        </div>
+                        <section class="ntfnbl" style="display: none;">
+                            <h4>Notifications</h4>
+                            <span id="unrd-cnt">15</span>
+                            <!-- <div class="mtntfn">
+                                <i class="fa fa-heart-o" aria-hidden="true"></i>
+                                No New Notifications
+                            </div> -->
+                            <div class="nf-apnAr">
+                                <div class="ntnfelewr">
+                                    <div class="ntnfst">
+                                        <i class="fa fa-bolt" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="ntnscnd">
+                                        <span class="boldnft">
+                                            <a href="profile.html">
+                                                User_1
+                                            </a>
+                                        </span>
+                                        started following you
+                                        <span class="actns cnf">Follow</span>
+                                        <div class="ntnts">
+                                            <span></span>
+                                            22m
+                                        </div>
+                                    </div>
+                                    <div class="ntnthrd">
+                                        <div class="pstimgprvw accpt">
+                                            <img src="images/img1.jpg" alt="yourpost">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ntnfelewr unread">
+                                    <div class="ntnfst">
+                                        <i class="fa fa-heart" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="ntnscnd">
+                                        <span class="boldnft">
+                                            <a href="profile.html">
+                                                User_1
+                                            </a>
+                                        </span>,
+                                        <span class="boldnft">
+                                            <a href="profile.html">
+                                                User_2
+                                            </a>
+                                        </span>,
+                                        <span class="boldnft">
+                                            <a href="likes.html">
+                                                237 others
+                                            </a>
+                                        </span>
+                                        liked your post
+                                        <div class="ntnts">
+                                            <span></span>
+                                            22m
+                                        </div>
+                                    </div>
+                                    <div class="ntnthrd">
+                                        <div class="pstimgprvw">
+                                            <img src="images/img1.jpg" alt="yourpost">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ntnfelewr">
+                                    <div class="ntnfst">
+                                        <i class="fa fa-comment" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="ntnscnd">
+                                        <span class="boldnft">
+                                            <a href="profile.html">
+                                                User_1
+                                            </a>
+                                        </span>
+                                        commented "Very Nice 🔥🔥🔥🔥" on your post.
+                                        <div class="ntnts">
+                                            <span></span>
+                                            26m
+                                        </div>
+                                        <div class="ntnpsopt">
+                                            <span class="n-lk-hrt">
+                                                <i class="fa fa-heart-o"></i>
+                                            </span>
+                                            <span>Reply</span>
+                                        </div>
+                                    </div>
+                                    <div class="ntnthrd">
+                                        <div class="pstimgprvw">
+                                            <img src="images/img1.jpg" alt="post thumb">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ntnfelewr">
+                                    <div class="ntnfst">
+                                        @
+                                    </div>
+                                    <div class="ntnscnd">
+                                        <span class="boldnft">
+                                            <a href="profile.html">
+                                                User_3
+                                            </a>
+                                        </span>
+                                        mentioned you and
+                                        <span class="boldnft">2 others</span>
+                                        in their post.
+                                        <div class="ntnts">
+                                            <span></span>
+                                            54m
+                                        </div>
+                                    </div>
+                                    <div class="ntnthrd">
+                                        <div class="pstimgprvw">
+                                            <img src="images/img3.jpg" alt="his post">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ntnfelewr">
+                                    <div class="ntnfst">
+                                        <i class="fa fa-comment" aria-hidden="true"></i>
+                                    </div>
+                                    <div class="ntnscnd">
+                                        <span class="boldnft">
+                                            <a href="profile.html">
+                                                someone
+                                            </a>
+                                        </span>
+                                        commented "stunning capture" on your post.
+                                        <div class="ntnts">
+                                            <span></span>
+                                            59m
+                                        </div>
+                                    </div>
+                                    <div class="ntnthrd">
+                                        <div class="pstimgprvw">
+                                            <i class="fa fa-heart-o"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="shl-tb" title="Show All Notifications">
+                                <a href="notifications.html">
+                                    Show All
+                                </a>
+                            </div>
+                        </section>
+                        <div class="messages-logo">
+                            <img src="images/telegram.svg">
+                            <div class="msgs-cnt">2</div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <section class="navbar">
+                <div class="srhwrp">
+                    <form action="" method="get">
+                        <input type="text" name="query" id="u-srwadb" placeholder="Search...">
+                        <label for="u-srwadb">
+                            <i class="fa fa-search" aria-hidden="true"></i>
+                        </label>
+                    </form>
+                </div>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a class="mnwrel active">
+                                <i class="fa fa-home" aria-hidden="true"></i>
+                                Home
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mnwrel">
+                                <i class="fa fa-bookmark-o" aria-hidden="true"></i>
+                                Bookmarks
+                            </a>
+                        </li>
+                        <li>
+                            <a class="mnwrel">
+                                <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                                Messages
+                            </a>
+                        </li>
+                        <li>
+                            <a href="profile.html" class="mnwrel">
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                Profile
+                            </a>
+                        </li>
+                        <li>
+                            <a href="settings.html" class="mnwrel">
+                                <i class="fa fa-gear" aria-hidden="true"></i>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="shrqu">
+                    <form action="#" method="post" id="s-q-prf">
+                        <textarea name="" id="" placeholder="Share something"></textarea>
+                        <button>Post</button>
+                    </form>
+                    <div class="sdlnrp">
+                        <div class="shr-pst">
+                            <form action="" method="post" enctype="multipart/form-data">
+                                <input type="file" name="" id="p-npst">
+                                <label for="p-npst">
+                                    <i class="fa fa-image" aria-hidden="true"></i>
+                                    Add a post
+                                </label>
+                            </form>
+                        </div>
+                        <div class="shr-str">
+                            <input type="file" name="" id="s-npst">
+                            <label for="s-npst">
+                                <i class="fa fa-pencil-square-o"></i>
+                                Share a story
+                            </label>
+                        </div>
+                    </div>
+                    </form>
+                </div>
+                <div class="lgdinac">
+                    <div class="lprcrw">
+                        <div class="imgrw">
+                            <img src="images/img3.jpg" alt="Logged in user dp">
+                        </div>
+                        <div class="narnw">
+                            <div class="uprlnc">Mayank</div>
+                            <div class="lwrnc">Mayank Singh</div>
+                        </div>
+                        <div class="smlgico">
+                            <i class="fa fa-angle-down" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                    <div class="lgext">
+                        <a href="">
+                            Logout
+                            <i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <main class="main-content">
+                <div class="cntnrpr">
+                    <section class="usrprfl">
+                        <div class="usrprfln">
+                            <div class="primg">
+                                <img src="images/img2.jpg" alt="">
+                            </div>
+                            <div class="usrprflnwr">
+                                <div class="prdtls">
+                                    <div class="npsts">
+                                        <div class="npstsf">
+                                            23
+                                        </div>
+                                        <div class="npstss">
+                                            Posts
+                                        </div>
+                                    </div>
+                                    <div class="npstflr">
+                                        <div class="npstsf">
+                                            <a href="followers.html">17k</a>
+                                        </div>
+                                        <div class="npstss">
+                                            <a href="followers.html">Followers</a>
+                                        </div>
+                                    </div>
+                                    <div class="npsfln">
+                                        <div class="npstsf">
+                                            <a href="following.html">270</a>
+                                        </div>
+                                        <div class="npstss">
+                                            <a href="following.html">Following</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="usrbio">
+                            <div class="usrnmpr">UserName</div>
+                            <div class="usrdsgpr">Developer</div>
+                            <div class="bodtlsur">
+                                <span>-&gt;</span> UX Designer 😍 <br>
+                                <span>-&gt;</span> Programmer 😎 <br>
+                                -&gt; Following passion 🔥 <br>
+                                -&gt; Friendly 😁
+                                <div class="usrdob">
+                                    <i class="fa fa-calendar" aria-hidden="true"></i>01-08-2001
+                                </div>
+                                <div class="usrwbst">
+                                    <a href="#">username.com</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="usroptcn">
+                        <div class="uflwusr ">
+                            <button class="trbwp">Follow</button>
+                        </div>
+                        <div class="usrmsg ">
+                            <button>Message</button>
+                        </div>
+                        <div class="blusrpm">
+                            <div class="propns">
+                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                <ul>
+                                    <li>Block</li>
+                                    <li>Report</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="usrpstgrd">
+                        <div class="gpelurpt">
+                            <div class="icnopsurp">
+                                <div class="uallpst active">
+                                    <i class="fa fa-th" aria-hidden="true"></i>
+                                </div>
+                                <div class="uallmns">
+                                    <i class="fa fa-address-book-o" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="user-posts">
+                            <div class="pstview">
+                                <div class="thimv">
+                                    <img src="images/img1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pstview">
+                                <div class="thimv">
+                                    <img src="images/img2.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pstview">
+                                <div class="thimv">
+                                    <img src="images/img3.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pstview">
+                                <div class="thimv">
+                                    <img src="images/img4.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pstview">
+                                <div class="thimv">
+                                    <img src="images/cars.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="pstview">
+                                <div class="thimv">
+                                    <img src="images/4858584-hd-wallpaper-car.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="pracc">
+                        <div class="prdlshdn">
+                            <h4>This account is Private</h4>
+                            <p>
+                                Follow <span>User</span> to see their posts.
+                            </p>
+                            <p>
+                                Already following <span>User</span>?
+                            </p>
+                            <a href="#">Login</a>
+                        </div>
+                    </section>
+                </div>
+            </main>
+            <aside class="right-col">
+                <section class="sgtdac">
+                    <h5>Suggestions</h5>
+                    <ul>
+                        <li class="acwrp">
+                            <div class="primgu">
+                                <img src="images/img3.jpg" alt="Mayank's profile picture">
+                            </div>
+                            <div class="uncts">
+                                <div class="unmest">Mayank
+                                    <div class="vr-mrk fa-stack">
+                                        <i class="fa fa-certificate fa-stack-1x" aria-hidden="true"></i>
+                                        <i class="fa fa-check fa-stack-1x" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div class="rnmest">Mayank Singh</div>
+                            </div>
+                            <div class="factnb">
+                                <a href="">Follow</a>
+                            </div>
+                        </li>
+                        <li class="acwrp">
+                            <div class="primgu">
+                                <img src="images/img4.jpg" alt="">
+                            </div>
+                            <div class="uncts">
+                                <div class="unmest">UserName</div>
+                                <div class="rnmest">Real Name</div>
+                            </div>
+                            <div class="factnb">
+                                <a href="">Follow</a>
+                            </div>
+                        </li>
+                        <li class="acwrp">
+                            <div class="primgu">
+                                <img src="images/img2.jpg" alt="">
+                            </div>
+                            <div class="uncts">
+                                <div class="unmest">random</div>
+                                <div class="rnmest">Real Name</div>
+                            </div>
+                            <div class="factnb">
+                                <a href="">Follow</a>
+                            </div>
+                        </li>
+                        <li class="acwrp">
+                            <div class="primgu">
+                                <img src="images/cars.jpg" alt="">
+                            </div>
+                            <div class="uncts">
+                                <div class="unmest">random_ person2</div>
+                                <div class="rnmest">Real Name</div>
+                            </div>
+                            <div class="factnb">
+                                <a href="">Follow</a>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+                <section class="ntfnbl">
+                    <h4>Notifications</h4>
+                    <span id="unrd-cnt">15</span>
+                    <!-- <div class="mtntfn">
+                        <i class="fa fa-heart-o" aria-hidden="true"></i>
+                        No New Notifications
+                    </div> -->
+                    <div class="nf-apnAr">
+                        <div class="ntnfelewr">
+                            <div class="ntnfst">
+                                <i class="fa fa-bolt" aria-hidden="true"></i>
+                            </div>
+                            <div class="ntnscnd">
+                                <span class="boldnft">
+                                    <a href="profile.html">
+                                        User_1
+                                    </a>
+                                </span>
+                                started following you
+                                <span class="actns cnf">Follow</span>
+                                <div class="ntnts">
+                                    <span></span>
+                                    22m
+                                </div>
+                            </div>
+                            <div class="ntnthrd">
+                                <div class="pstimgprvw accpt">
+                                    <img src="images/img1.jpg" alt="yourpost">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ntnfelewr unread">
+                            <div class="ntnfst">
+                                <i class="fa fa-heart" aria-hidden="true"></i>
+                            </div>
+                            <div class="ntnscnd">
+                                <span class="boldnft">
+                                    <a href="profile.html">
+                                        User_1
+                                    </a>
+                                </span>,
+                                <span class="boldnft">
+                                    <a href="profile.html">
+                                        User_2
+                                    </a>
+                                </span>,
+                                <span class="boldnft">
+                                    <a href="likes.html">
+                                        237 others
+                                    </a>
+                                </span>
+                                liked your post
+                                <div class="ntnts">
+                                    <span></span>
+                                    22m
+                                </div>
+                            </div>
+                            <div class="ntnthrd">
+                                <div class="pstimgprvw">
+                                    <img src="images/img1.jpg" alt="yourpost">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ntnfelewr">
+                            <div class="ntnfst">
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                            </div>
+                            <div class="ntnscnd">
+                                <span class="boldnft">
+                                    <a href="profile.html">
+                                        User_1
+                                    </a>
+                                </span>
+                                commented "Very Nice 🔥🔥🔥🔥" on your post.
+                                <div class="ntnts">
+                                    <span></span>
+                                    26m
+                                </div>
+                                <div class="ntnpsopt">
+                                    <span>
+                                        <i class="fa fa-heart-o"></i>
+                                    </span>
+                                    <span>Reply</span>
+                                </div>
+                            </div>
+                            <div class="ntnthrd">
+                                <div class="pstimgprvw">
+                                    <img src="images/img1.jpg" alt="post thumb">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ntnfelewr">
+                            <div class="ntnfst">
+                                @
+                            </div>
+                            <div class="ntnscnd">
+                                <span class="boldnft">
+                                    <a href="profile.html">
+                                        User_3
+                                    </a>
+                                </span>
+                                mentioned you and
+                                <span class="boldnft">2 others</span>
+                                in their post.
+                                <div class="ntnts">
+                                    <span></span>
+                                    54m
+                                </div>
+                            </div>
+                            <div class="ntnthrd">
+                                <div class="pstimgprvw">
+                                    <img src="images/img3.jpg" alt="his post">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ntnfelewr">
+                            <div class="ntnfst">
+                                <i class="fa fa-comment" aria-hidden="true"></i>
+                            </div>
+                            <div class="ntnscnd">
+                                <span class="boldnft">
+                                    <a href="profile.html">
+                                        someone
+                                    </a>
+                                </span>
+                                commented "stunning capture" on your post.
+                                <div class="ntnts">
+                                    <span></span>
+                                    59m
+                                </div>
+                            </div>
+                            <div class="ntnthrd">
+                                <div class="pstimgprvw">
+                                    <i class="fa fa-heart-o"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="shl-tb" title="Show All Notifications">
+                        <a href="">
+                            Show All
+                        </a>
+                    </div>
+                </section>
+                <footer class="pc-footer">
+                    <div>
+                        &copy; 2020 - Mayank Singh
+                    </div>
+                    <div class="hrflinks">
+                        <ul>
+                            <li>
+                                <a href="">Help</a> |
+                            </li>
+                            <li>
+                                <a href="">About</a> |
+                            </li>
+                            <li>
+                                <a href="">Privacy</a> |
+                            </li>
+                            <li>
+                                <a href="">APIs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </footer>
+            </aside>
+            <footer>
+                <div class="footer">
+                    <div class="home-btn f-icsize">
+                        <img src="images/home.svg" class="ftr-icon">
+                    </div>
+                    <div class="search-btn f-icsize">
+                        <a href="search.html">
+                            <img src="images/loupe.svg" class="ftr-icon">
+                        </a>
+                    </div>
+                    <div class="add-btn f-icsize" id="add-btn">
+                        <img src="images/add.png" class="ftr-icon">
+                    </div>
+                    <div class="notification-btn f-icsize">
+                        <a href="notifications.html">
+                            <img src="images/heart.svg" class="ftr-icon">
+                        </a>
+                    </div>
+                    <div class="user-info f-icsize">
+                        <a href="ownpr.html">
+                            <img src="images/img4.jpg">
+                        </a>
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+</body>
+<script src="js/main.js"></script>
+
+</html>

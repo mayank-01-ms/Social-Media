@@ -1,0 +1,67 @@
+:root{
+  --mainBg: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
+  --inputBg: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
+  --gradientFg: linear-gradient(315deg, #ee8c68 0%, #eb6b9d 74%);
+    --glassBg: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+    );
+    --navBg: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.7),
+        rgba(255, 255, 255, 0.3)
+      );
+      --cardBg: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.5)
+      );
+
+    --textH: #333;
+    --textM: #666;
+    --textL: #999;
+
+    --toggleBg: #ee8cc852; 
+    --toggleBorder: #eb6b9d; 
+    --toggleChckedBg: #eb6b9d;
+
+    --boxShadow: rgba(122, 122, 122, 0.212);
+    
+  }
+  
+body[data-theme="green"]{    
+  --mainBg: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  --inputBg: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  --gradientFg: linear-gradient(to right top, #65dfc9, #6cdbeb);
+  --toggleBg: #65dfc952; 
+  --toggleBorder: #6cdbeb; 
+  --toggleChckedBg: #6cdbeb;
+
+}
+body[data-theme="dark"]{
+  --mainBg: #202342;
+  --gradientFg: #f65064;
+  --cardBg: #2f3156;
+  --navBg: #2d325a;
+  --glassBg: linear-gradient(
+        to right bottom,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.07)
+    );
+  --inputBg: linear-gradient(
+        to left top,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.15)
+    );
+
+  --textH: #eee;
+  --textM: #ccc;
+  --textL: #aaa;
+
+  --toggleBg: #f6506452; 
+  --toggleBorder: #f65064; 
+  --toggleChckedBg: #f65064;
+  --boxShadow: #00000000;
+
+}

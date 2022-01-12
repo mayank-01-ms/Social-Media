@@ -1,0 +1,28 @@
+.nrc-fly-hrts{
+    position: relative;
+    &::before{
+        content: "\f004";                                        
+        position: absolute;
+        top: -1.2rem;
+        left: -0.35rem;
+        height: 2rem;
+        width: 2rem;
+        display: inline-block;
+        font-family: "FontAwesome";
+        font-size: 1.6rem;
+        @include heartActive;
+        animation: likeHeartSend 1.5s linear;
+    }
+    @keyframes likeHeartSend {
+        from{
+            opacity: 1;
+            font-size: 1.6rem;
+            transform: translateY(0);
+        }
+        to{
+            opacity: 0;
+            font-size: 0.8rem;
+            transform: translateY(-15vh);
+        }
+    }
+}

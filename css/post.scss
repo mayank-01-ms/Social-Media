@@ -1,0 +1,467 @@
+@import "imports/common";
+
+//Header css files
+@import "imports/headerarrow";
+
+.main-content{
+    .pstvwp{
+        .post{
+            padding-top: 10px;
+            
+            .post-caption{
+                padding-right: 10px;
+            }
+        }
+    }
+}
+
+.pstvwp{
+    padding-top: 35px;
+}
+
+.comments{
+    background: var(--bg);
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 5px;
+    border-top: 1px solid var(--borderBottom);
+    color: var(--txtH);
+
+    h5{
+        padding: 10px 5px;
+    }
+
+    //Wrapper of all comments
+    .cmntswrp{
+
+        //A single comment
+        .cmnuswr{
+            display: flex;
+            font-size: 0.8rem;
+            color: var(--txtM);
+            margin-bottom: 15px;
+
+            .cmnprig,
+            .hrtcmnl{                            
+                min-width: 50px;
+                display: flex;
+                @include justifycenter;
+            }
+            //Like heart color
+            .hrtcmnl{
+                color: var(--txtL);
+
+                i{
+                    cursor: pointer;
+                }
+                &.active{
+                    i{
+                        @include heartActive;
+                    }
+                }
+
+            }
+            @import "animations/flyingHeartAnimation";
+            .cmnprig {
+                img{                            
+                    @include roundImg(30px);
+                }
+            }
+            .scdcmn{                            
+                width: calc(100% - 100px);
+                font-weight: 300;
+
+                //View Replies
+                .view-replies{
+                    font-size: 0.7rem;
+                    color: var(--txtVl);
+                    margin-top: 5px;
+                    cursor: pointer;
+
+                    &::before,
+                    &::after{
+                        content: "----";
+                    }
+                }
+                //Replies
+                .replies{
+                    .reply-item{
+                        list-style: none;
+                        display: flex;
+
+                        .user-profile-image{
+                            img{
+                                @include roundImg(30px);
+                            }
+                        }
+                        .like-cmnt-icon{
+                            .fa{
+                                cursor: pointer;
+                            }
+                        }
+                        .user-profile-image,
+                        .like-cmnt-icon{                            
+                            min-width: 50px;
+                            display: flex;
+                            @include justifycenter;
+                        }
+                    }
+                }
+            }
+            // user profile and comment
+            .sduprcmn{
+                .sdclurnm{                                    
+                    font-weight: 600;
+                    margin-right: 2px;
+                    
+                    a{
+                        color: var(--txtH);
+                    }
+                    //verified mark
+                    .vr-mrk{
+                        color: var(--link);
+                        font-size: 1rem;
+                        max-height: 15px;
+                        max-width: 20px;
+                        transform: translateY(-10px);
+
+                        .fa-check{
+                            color: #fff;
+                            font-size: 0.5rem;
+                        }
+                    }
+                }
+            }
+            .sdlwrcmn{                            
+                font-size: 0.75rem;
+                font-weight: 500;
+                color: var(--txtL);
+
+                span{                                    
+                    display: inline-block;
+                    padding: 5px;
+                    color: var(--txtVl);
+                }
+                .sdlcmtsm{                                    
+                    font-size: 0.68rem;
+                    padding: 0;
+                    padding-top: 8px;
+                    font-weight: 300;
+                }
+                .sdlcmtll,
+                .sdcmrpu{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    //Load more comments btn div
+    .cmntlm{
+        @include hvCenter;
+        margin-bottom: 10px;
+
+        span{ 
+            @include hvCenter;
+            font-size: 1.75rem;
+            width: 30px;
+            height: 30px;
+            padding: 5px 0;
+            color: var(--txtL);
+            border: 1px solid var(--txtL);
+            border-radius: 50%;
+        }
+    }
+
+    //Post comment box, Write a comment
+    .cmntadc{        
+        @include aligncenter;   
+        width: 100%; 
+        height: 60px;
+        padding: 0 10px;
+        margin: 0 -15px;
+        position: fixed;
+        bottom: 45px;
+        border-top: 1px solid var(--borderBottom);
+        background: var(--fbg);
+
+        .onprcmim{
+            width: 50px;
+
+            img{                            
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+            }
+        }
+        .cmntipfl{
+            width: 100%;
+
+            input[type="text"]{                            
+                height: 40px;
+                padding: 0 15px;
+                margin-left: 4px;
+                width: calc(100% - 50px);
+                border: 1px solid var(--borderTop);
+                border-radius: 30px;
+                outline: none;
+                background: var(--pbg);
+                color: var(--txtH);
+
+                &:focus{
+                    border: none;
+                    box-shadow: 0px 0px 5px dodgerblue;
+                }
+            }
+            button{                            
+                border: none;
+                outline: none;
+                width: 40px;
+                background: transparent;
+                color: var(--link);
+                font-weight: 550;
+            }
+        }
+    }
+
+    //not login css
+    .ntlgin{
+        padding: 40px 5px;
+        font-size: 0.9rem;
+        text-align: center;
+
+        a{
+            font-weight: 500;
+            background: var(--link);
+            color: #fff;
+            display: inline-block;
+            padding: 8px 15px;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+    }
+
+    .comments-disabled{
+        text-align: center;
+        padding-top: 2rem;
+        font-size: 0.85rem;
+    }
+}
+
+//Add posts page
+.adpstg{
+    padding: 0 15px;
+    padding-top: 50px;
+    background: var(--bg);
+    color: var(--txtH);
+    min-height: 100vh;
+    font-size: 0.9rem;
+
+    .imdstn{
+        @include aligncenter;
+        width: 100%;
+        padding-top: 10px;
+
+        .imgbxrp{
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+
+            img{
+                width: 60px;
+                height: 60px;
+                border-radius: 5px;
+            }
+        }
+        .cptnar{
+            width: calc(100% - 80px);
+            
+            textarea{
+                resize: none;
+                width: 100%;
+                height: 60px;
+                @include inpt;
+                padding: 15px;
+            }
+        }
+    }
+    .adsmtng{
+        margin: 20px 0;
+        
+        label{
+            color: var(--txtM);
+        }
+        h5{
+            font-size: 0.85rem;
+        }
+        input{
+            width: 100%;
+            height: 30px;
+            @include inpt;
+            border-bottom: 1px solid var(--borderBottom);
+            transition: 0.3s linear;
+
+            &:focus{
+                border-bottom: 1px solid dodgerblue;
+            }
+        }
+        .mbxwr{
+            .umnae{
+                display: inline-block;
+                margin-top: 10px;
+                margin-right: 10px;
+                padding: 5px 10px;
+                font-size: 0.85rem;
+                border-radius: 20px;
+                box-shadow: 0px 0px 5px var(--bshadow),
+                            0px 5px 10px var(--bshadow);
+
+                .rmnps{
+                    display: inline-block;
+                    padding-left: 5px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+
+    .disable-comments{
+        @include fSpaceBetween;
+        cursor: pointer;
+        margin: 1rem 0;
+
+        h5{
+            color: var(--textM);
+            font-size: 0.85rem;
+        }
+        input{
+            display: none;
+        }
+        .labelDc{
+            @include toggle;
+            cursor: pointer;
+            margin-right: 1rem;
+
+            &::after{
+                @include toggleA;
+            }                
+        }
+        input:checked + .labelDc{
+            background: dodgerblue;
+        }
+        input:checked + .labelDc::after{
+            @include toggleC;
+        }
+    }
+
+    .add-btn{
+        position: fixed;
+        bottom: 15vh;
+        right: 1rem;
+        @include hvCenter;
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        background: dodgerblue;
+        color: #fff;
+        box-shadow: 0px 0px 15px dodgerblue;
+
+        .plus-icon{
+            font-size: 2rem;
+            display: inline-block;
+            margin-right: 10px;
+        }
+    }
+
+    .smbtn{
+        button{
+            cursor: pointer;
+            @include btn;
+            padding: 7px 15px;
+            border-radius: 5px;
+            font-weight: 500;
+        }
+    }
+}
+
+@media only screen and (min-width: 900px){
+    .comments{
+        margin: 0;
+        padding-bottom: 9vh;
+
+        .cmntswrp{
+            .cmnuswr{
+                .sdlwrcmn{
+                    #sdlcmtll,
+                    #sdcmrpu{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .hrtcmnl{
+                i{
+                    cursor: pointer;
+                }
+            }
+        }
+
+        .cmntlm{
+            span{
+                cursor: pointer;
+            }
+        }
+
+        //Add comment input box
+        .cmntadc{
+            background: var(--wbg);
+            width: 40vw;
+            height: 9vh;
+            bottom: 0px;
+            margin-left: -5px;
+
+            .cmntipfl{
+                button{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    //ADd post page
+    .adpstg{
+        .imdstn{
+            .imgbxrp{
+                height: 100px;
+                width: 100px;
+                img{
+                    height: 100px;
+                    width: 100px;
+                }
+            }
+            .cptnar{
+                textarea{
+                    height: 100px;
+                }
+            }
+        }
+        .adsmtng{
+            margin: 30px 0;
+
+            label{
+                cursor: pointer;
+            }
+        }
+
+        .disable-comments{
+            .labelDc{
+                margin-right: 33vw;
+            }
+        }
+        .add-btn{
+            right: 35vw;
+        }
+        .smbtn{
+            button{
+                cursor: pointer;
+            }
+        }
+    }
+}

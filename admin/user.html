@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Admins</title>
+</head>
+
+<body data-theme="green">
+    <main>
+        <section class="glass">
+            <div class="navigation">
+                <div class="admin_info">
+                    <img src="images/avtar.png" alt="">
+                    <h3>Mayank Singh</h3>
+                    <p>Owner</p>
+                </div>
+                <ul class="links">
+                    <li>
+                        <a href="index.html">
+                            <img src="" alt="">
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="#">
+                            <img src="" alt="">
+                            Manage user
+                        </a>
+                    </li>
+                    <li>
+                        <a href="reports.html">
+                            <img src="" alt="">
+                            Reports
+                        </a>
+                    </li>
+                    <li>
+                        <a href="admins.html">
+                            <img src="" alt="">
+                            Admins
+                        </a>
+                    </li>
+                </ul>
+                <div class="logout">
+                    Logout
+                </div>
+            </div>
+            <div class="content">
+                <header>
+                    <h1>Manage User</h1>
+                    <div class="theme_selector">
+                        <p>Theme:</p>
+                        <ul>
+                            <li>
+                                <input type="radio" name="theme" id="Peach" value="peach">
+                                <label for="Peach">Peach</label>
+                                <div class="check"><div class="inside"></div>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Green" value="green">
+                                <label for="Green">Green</label>
+                            </li>
+                            <li>
+                                <input type="radio" name="theme" id="Dark" value="dark">
+                                <label for="Dark">Dark</label>
+                            </li>
+                        </ul>
+                    </div>
+                </header>
+                <section class="scrollable_view manage_user">
+                    <div class="user_details">
+                        <div id="noUserMsg" style="display: none; margin-top: 4rem; text-align: center;">
+                            <h4>Search for a user to view details</h4>
+                        </div>
+                        <div class="user_frow">
+                            <div class="profile">
+                                <a href="">
+                                    <img src="images/avtar.png" alt="">
+                                </a>
+                                <p>
+                                    <a href="">Mayank</a>
+                                </p>
+                                <p>Mayank Singh</p>
+                            </div>
+                            <ul>
+                                <li>
+                                    <p>Joined On</p>
+                                    <p>
+                                        <a href="mailto:abc@xyz.com">01-01-2021</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>email</p>
+                                    <p>
+                                        <a href="mailto:abc@xyz.com">abc@xyz.com</a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p>DOB</p>
+                                    <p>01-08-2001</p>
+                                </li>
+                                <li>
+                                    <p>Gender</p>
+                                    <p>Male</p>
+                                </li>
+                                <li>
+                                    <p>Account Type</p>
+                                    <p>Public</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="user_srow">
+                            <ul class="details">
+                                <li>
+                                    <p>Posts</p>
+                                    <p>14</p>
+                                </li>
+                                <li>
+                                    <p>Followers</p>
+                                    <p>297</p>
+                                </li>
+                                <li>
+                                    <p>Following</p>
+                                    <p>151</p>
+                                </li>
+                                <li>
+                                    <p>Statuses</p>
+                                    <p>22</p>
+                                </li>
+                                <li>
+                                    <p>Comments</p>
+                                    <p>198</p>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="activity_log">
+                            <h4>Activity Log</h4>
+                            <ul>
+                                <li>
+                                    <p>Created Account</p>
+                                    <p>01 Jan 2021, 11:12:34</p>
+                                </li>
+                                <li>
+                                    <p>Visited <a href="">User</a> Profile page</p>
+                                    <p>01 Jan 2021, 11:12:34</p>
+                                </li>
+                                <li>
+                                    <p>Commented "hi" on <a href="">User</a> <a href="">post</a></p>
+                                    <p>01 Jan 2021, 11:12:34</p>
+                                </li>
+                                <li>
+                                    <p>Visited HomePage</p>
+                                    <p>01 Jan 2021, 11:12:34</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="second_col">
+                        <div class="moderation_history">
+                            <div class="search_bar">
+                                <img src="images/search.png" class="search_icon" alt="search icon" />
+                                <input type="text" placeholder="Search by username or user id">
+                                <ul class="search_res">
+                                    <li>
+                                        <div class="search_profile">
+                                            <img src="images/avtar.png">
+                                        </div>
+                                        <div class="search_name">
+                                            <p>Username</p>
+                                            <p>Real Name</p>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                            <h4>
+                                Account history
+                            </h4>
+                            <p>No moderation activity available on this account</p>
+                            <p>Feature under development</p>
+                        </div>
+                        <div class="user_group">
+                            <h4>User Group</h4>
+                            <div class="current_ug">
+                                <p>Current: Normal user</p>
+                                <select id="">
+                                    <option value="0">Select new group</option>
+                                    <option value="1">Read only</option>
+                                    <option value="2">Banned</option>
+                                </select>
+                            </div>
+                            <div class="verified">
+                                <label for="is_verifed">
+                                    Verified
+                                </label>
+                                <input type="checkbox" id="is_verifed">
+                                <label for="is_verifed" class="toggle"></label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+    </main>
+</body>
+<script src="js/main.js"></script>
+
+</html>

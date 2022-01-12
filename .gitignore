@@ -1,0 +1,7 @@
+# Igonring generated css and css map files 
+*.css
+*.css.map
+
+admin/images
+
+images/*
